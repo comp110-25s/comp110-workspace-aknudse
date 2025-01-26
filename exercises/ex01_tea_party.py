@@ -10,11 +10,19 @@ __author__ = "730761985"
 def main_planner(guests: int) -> None:
     """This function is the main function of the program and creates the output that allows users to
     see what they need in order to plan their party accordingly."""
-    print(f"A Cozy Tea Party for {guests} People!")
-    print(f"Tea Bags: {tea_bags(people=guests)}")
-    print(f"Treats: {treats(people=guests)}")
+    print("A Cozy Tea Party for " + str(guests) + " People!")
+    print("Tea Bags: " + str(tea_bags(people=guests)))
+    print("Treats: " + str(treats(people=guests)))
     print(
-        f"Cost: ${round(cost(tea_count=tea_bags(people=guests), treat_count=treats(people=guests)), 2)}"
+        "Cost: $"
+        + str(
+            round(
+                cost(
+                    tea_count=tea_bags(people=guests), treat_count=treats(people=guests)
+                ),
+                2,
+            )
+        )
     )
 
 
