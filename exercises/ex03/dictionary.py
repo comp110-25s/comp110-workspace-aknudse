@@ -1,4 +1,4 @@
-__author__ = "730761985"
+__author__ = """730761985"""
 
 
 def invert(d: dict[str, str]) -> dict[str, str]:
@@ -18,6 +18,18 @@ def count(values: list[str]) -> dict[str, int]:
         else:
             result[item] = 1
     return result
+
+
+def favorite_color(colors: dict[str, str]) -> str:
+    count = {}
+    for name, color in colors.items():
+        if color in count:
+            count[color] += 1
+        else:
+            count[color] = 1
+
+    max_color = max(count, key=count.get, default="")
+    return max_color
 
 
 def bin_len(words: list[str]) -> dict[int, set[str]]:
